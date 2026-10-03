@@ -1,8 +1,14 @@
+---
 layout: post
-title: "Welcome to My Blog!"
+title: "Welcome to my Neon Blog"
 date: 2026-10-03
 ---
 
 # Hello World
+ <h2 class="neon-text">Hello World!</h2>
+ This is my very first blog post <span class="neon-text">hosted on GitHub Pages!!</span>
 
-This is my very first blog post hosted on GitHub Pages!
+
+
+
+
