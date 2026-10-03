@@ -1,0 +1,29 @@
+@import "{{ site.theme }}";
+
+/* Custom Neon Styles */
+.neon-text {
+  color: #fff; /* Bright white core */
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Stacking text-shadows creates the volumetric glow */
+  text-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff, 
+    0 0 20px #0ff,  /* Cyan inner glow */
+    0 0 40px #0ff,  /* Cyan mid glow */
+    0 0 80px #0ff;  /* Cyan broad halo */
+}
+
+/* Optional: Add a flickering animation */
+.neon-flicker {
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 40px #ff00de, 0 0 80px #ff00de; /* Pink */
+  }
+  20%, 24%, 55% {        
+    text-shadow: none; /* Quickly drops the shadow to mimic a faulty bulb */
+  }
+}
