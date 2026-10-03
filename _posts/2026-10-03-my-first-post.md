@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Welcome to my Neon Blog"
+title: "Hello World"
 date: 2026-10-03
 ---
 
