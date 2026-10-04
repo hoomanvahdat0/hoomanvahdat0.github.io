@@ -1,15 +1,95 @@
-
+---
+# Front matter (the two --- lines) is required so Jekyll processes this file
+---
+ 
+// Override minima's variables BEFORE importing the theme
+$background-color: #0b0f1a;
+$text-color:       #d6e2f0;
+$brand-color:      #00e5ff;
+$grey-color:       #8b9bb4;
+$grey-color-light: #1c2438;
+$grey-color-dark:  #b7c4d9;
+ 
 @import "{{ site.theme }}";
-
-/* Custom Neon Styles */
+ 
+:root {
+  --cyan: #00e5ff;
+  --magenta: #ff3df2;
+  --card: #121a2e;
+}
+ 
+body {
+  background: radial-gradient(circle at top, #151d36 0%, #0b0f1a 60%) fixed;
+}
+ 
+a { color: var(--cyan); transition: color .2s, text-shadow .2s; }
+a:hover { color: var(--magenta); text-decoration: none; text-shadow: 0 0 8px var(--magenta); }
+ 
+h1, h2, h3 { color: #fff; }
+ 
+/* Header with a gradient accent line */
+.site-header {
+  border-top: 0;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--cyan), var(--magenta)) 1;
+  background: rgba(11, 15, 26, .85);
+}
+.site-title, .site-title:visited {
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.site-nav .page-link { color: var(--grey-color-dark, #b7c4d9); }
+ 
+/* About card */
+.about {
+  background: var(--card);
+  border: 1px solid #243052;
+  border-left: 4px solid var(--cyan);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 25px rgba(0, 229, 255, .08);
+}
+.about h2 { margin-top: 0; color: var(--cyan); }
+.about p:last-child { margin-bottom: 0; }
+ 
+/* Post list as cards */
+.post-list > li {
+  background: var(--card);
+  border: 1px solid #243052;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.post-list > li:hover {
+  transform: translateY(-3px);
+  border-color: var(--magenta);
+  box-shadow: 0 6px 24px rgba(255, 61, 242, .15);
+}
+.post-link { font-weight: 600; }
+.post-meta { color: var(--magenta); }
+ 
+/* Footer */
+.site-footer { border-top: 1px solid #243052; }
+ 
+/* Code blocks */
+pre, code { background: #0f1526; border-color: #243052; color: #e6edf7; }
+ 
+/* Neon text (your original style) */
 .neon-text {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 
-    0 0 5px #fff, 
-    0 0 10px #fff, 
-    0 0 20px #0ff,  
-    0 0 40px #0ff,  
-    0 0 80px #0ff;  
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
 }
+ 
+
