@@ -44,7 +44,7 @@ x <- c(0.05, 0.10, 0.15, 0.20, 0.50)
 +      xlab = "Probability of Store Capacity Category",
 +      ylab = "Store Capacity Category",
 +      pch = 19)
-
+<img src="/assets/images/graph1.png" width="600">
 category <- c(">40%-50%", ">30%-40%", ">20%-30%", ">10%-20%", "<=10%")
 
 probability <- c(0.05, 0.10, 0.15, 0.20, 0.50)
@@ -54,7 +54,7 @@ barplot(probability,
         xlab = "Store Capacity Occupied",
         ylab = "Probability",
         names.arg = category)
-
+<img src="/assets/images/graph2.png" width="600">
 data <- c(10, 40, -18, 24, 19, 0, 32)
 > p <- c(.13, .17, .05, .10, .24, .16, .15)
 > mean <- sum(data * p)
