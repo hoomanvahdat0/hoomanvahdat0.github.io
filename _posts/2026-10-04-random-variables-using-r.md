@@ -5,7 +5,7 @@ date: 2026-10-04
 ---
 ## Scenario
 
-During the COVID-19 pandemic, a provincial government in Canada introduced a regulation limiting the number of customers in stores to no more than **50% of the store's maximum capacity**.
+During one of the many ups and downs of the COVID-19 pandemic, a provincial government in Canada introduced a regulation limiting the number of customers in stores to no more than **50% of the store's maximum capacity**.
 
 To examine customer behavior and compliance with this restriction, a study was conducted to estimate the **average customer volume**, expressed as a percentage of store capacity, on a specific day.
 
