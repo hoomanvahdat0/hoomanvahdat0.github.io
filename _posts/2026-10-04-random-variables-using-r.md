@@ -1,4 +1,8 @@
-
+---
+layout: post
+title: "Random Variables Using R"
+date: 2026-10-04
+---
 ## Scenario
 
 During the COVID-19 pandemic, a provincial government in Canada introduced a regulation limiting the number of customers in stores to no more than **50% of the store's maximum capacity**.
