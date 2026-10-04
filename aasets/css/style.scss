@@ -3,83 +3,210 @@
 ---
  
 // Override minima's variables BEFORE importing the theme
-$background-color: #0b0f1a;
-$text-color:       #d6e2f0;
-$brand-color:      #00e5ff;
-$grey-color:       #8b9bb4;
-$grey-color-light: #1c2438;
-$grey-color-dark:  #b7c4d9;
+$background-color: #0a0a0a;
+$text-color:       #ffffff;
+$brand-color:      #00aa44;
+$grey-color:       #dddddd;
+$grey-color-light: #1a1a1a;
+$grey-color-dark:  #ffffff;
  
 @import "{{ site.theme }}";
  
-:root {
-  --cyan: #00e5ff;
-  --magenta: #ff3df2;
-  --card: #121a2e;
-}
+// Tricolor palette (green / white / red)
+$green: #00aa44;
+$neon-green: #00cc55;
+$red: #ce2b37;
+$tricolor: linear-gradient(90deg, #00aa44, #ffffff, #ce2b37, #00aa44);
  
+/* ---------- Body + moving star overlay ---------- */
 body {
-  background: radial-gradient(circle at top, #151d36 0%, #0b0f1a 60%) fixed;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #fff;
+  background: #0a0a0a;
+  overflow-x: hidden;
 }
  
-a { color: var(--cyan); transition: color .2s, text-shadow .2s; }
-a:hover { color: var(--magenta); text-decoration: none; text-shadow: 0 0 8px var(--magenta); }
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.05;
+  animation: moveStars 60s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
  
-h1, h2, h3 { color: #fff; }
+@keyframes moveStars {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(100px, 100px); }
+}
  
-/* Header with a gradient accent line */
+/* ---------- Header (replaces the sidebar) ---------- */
 .site-header {
   border-top: 0;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(90deg, var(--cyan), var(--magenta)) 1;
-  background: rgba(11, 15, 26, .85);
+  border-bottom: 2px solid $red;
+  background: #050505;
 }
-.site-title, .site-title:visited {
-  font-weight: 700;
-  background: linear-gradient(90deg, var(--cyan), var(--magenta));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.site-nav .page-link { color: var(--grey-color-dark, #b7c4d9); }
  
-/* About card */
+.site-title,
+.site-title:visited {
+  color: #fff;
+  font-weight: 700;
+  animation: triflicker 3s infinite alternate;
+}
+ 
+.site-nav .page-link {
+  color: $green;
+  position: relative;
+  transition: 0.3s;
+}
+ 
+.site-nav .page-link:hover {
+  color: #fff;
+  text-shadow: 0 0 5px $neon-green, 0 0 10px $neon-green, 0 0 20px $neon-green;
+}
+ 
+/* ---------- Headings: flicker through green, white, red ---------- */
+h1, .post-title {
+  color: #fff;
+  animation: triflicker 3s infinite alternate;
+}
+ 
+h2, h3 { color: #fff; text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); }
+ 
+@keyframes triflicker {
+  0%   { color: #00aa44; text-shadow: 0 0 10px #00aa44, 0 0 20px #00aa44; }
+  40%  { color: #ffffff; text-shadow: 0 0 10px #ffffff, 0 0 20px rgba(255,255,255,0.5); }
+  70%  { color: #ffffff; text-shadow: 0 0 5px #ffffff; }
+  100% { color: #ce2b37; text-shadow: 0 0 10px #ce2b37, 0 0 25px #ce2b37; }
+}
+ 
+/* ---------- Links: tricolor neon hover with flowing underline ---------- */
+.page-content a:not(.post-link) {
+  display: inline-block;
+  color: $green;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+ 
+.page-content a:not(.post-link):hover {
+  color: #fff;
+  text-shadow:
+    0 0 5px $neon-green,
+    0 0 10px $neon-green,
+    0 0 20px $red,
+    0 0 30px $red;
+  transform: translateX(8px);
+}
+ 
+.page-content a:not(.post-link)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: $tricolor;
+  background-size: 300%;
+  transition: width 0.3s;
+}
+ 
+.page-content a:not(.post-link):hover::after {
+  width: 100%;
+  animation: borderFlow 3s linear infinite;
+}
+ 
+@keyframes borderFlow {
+  from { background-position: 0%; }
+  to   { background-position: 300%; }
+}
+ 
+/* ---------- About card ---------- */
 .about {
-  background: var(--card);
-  border: 1px solid #243052;
-  border-left: 4px solid var(--cyan);
+  background: #050505;
+  border: 2px solid #fff;
   border-radius: 10px;
   padding: 1.25rem 1.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 0 25px rgba(0, 229, 255, .08);
+  transition: 0.3s;
 }
-.about h2 { margin-top: 0; color: var(--cyan); }
+ 
+.about h2 { margin-top: 0; color: $neon-green; }
 .about p:last-child { margin-bottom: 0; }
  
-/* Post list as cards */
+.about:hover {
+  border-color: $red;
+  box-shadow: 0 0 10px $red, 0 0 20px rgba(206, 43, 55, 0.5), 0 0 5px $green;
+}
+ 
+/* ---------- Post list as project-style cards ---------- */
+.post-list {
+  margin-left: 0;
+  list-style: none;
+}
+ 
 .post-list > li {
-  background: var(--card);
-  border: 1px solid #243052;
+  position: relative;
+  background: #050505;
+  border: 2px solid #fff;
   border-radius: 10px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1rem;
-  transition: transform .2s, box-shadow .2s, border-color .2s;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
+ 
+.post-list > li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: $tricolor;
+  background-size: 300%;
+  filter: blur(8px);
+  opacity: 0;
+  z-index: -1;
+}
+ 
 .post-list > li:hover {
-  transform: translateY(-3px);
-  border-color: var(--magenta);
-  box-shadow: 0 6px 24px rgba(255, 61, 242, .15);
+  transform: scale(1.03);
+  border-color: $red;
+  box-shadow: 0 0 10px $red, 0 0 20px rgba(206, 43, 55, 0.5), 0 0 5px $green;
 }
-.post-link { font-weight: 600; }
-.post-meta { color: var(--magenta); }
  
-/* Footer */
-.site-footer { border-top: 1px solid #243052; }
+.post-list > li:hover::before {
+  opacity: 1;
+  animation: borderFlow 3s linear infinite;
+}
  
-/* Code blocks */
-pre, code { background: #0f1526; border-color: #243052; color: #e6edf7; }
+.post-link {
+  color: $neon-green;
+  font-weight: 600;
+}
  
-/* Neon text (your original style) */
+.post-link:hover {
+  color: #fff;
+  text-shadow: 0 0 5px $neon-green, 0 0 10px $neon-green;
+  text-decoration: none;
+}
+ 
+.post-meta { color: #dddddd; font-size: 14px; }
+ 
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 2px solid $red;
+  background: #050505;
+}
+ 
+
+pre, code { background: #111; border-color: #333; color: #e6edf7; }
+ 
+
 .neon-text {
   color: #fff;
   font-weight: bold;
@@ -93,3 +220,8 @@ pre, code { background: #0f1526; border-color: #243052; color: #e6edf7; }
 }
  
 
+@media (max-width: 768px) {
+  .post-list > li:hover { transform: none; }
+  .page-content a:not(.post-link):hover { transform: none; }
+}
+ 
