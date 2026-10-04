@@ -74,7 +74,6 @@ body::before {
 /* ---------- Headings: flicker through green, white, red ---------- */
 h1, .post-title {
   color: #fff;
-  animation: triflicker 3s infinite alternate;
 }
  
 h2, h3 { color: #fff; text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); }
@@ -206,17 +205,27 @@ h2, h3 { color: #fff; text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); }
 /* ---------- Code ---------- */
 pre, code { background: #111; border-color: #333; color: #e6edf7; }
  
-/* ---------- Your original neon text ---------- */
+/* ---------- Neon text: glow only in the About section (home page) ---------- */
 .neon-text {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
+}
+ 
+.about .neon-text {
   text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 20px #0ff,
     0 0 40px #0ff,
     0 0 80px #0ff;
+}
+ 
+/* ---------- No glow inside posts ---------- */
+.post-content h2,
+.post-content h3,
+.post-content .neon-text {
+  text-shadow: none;
 }
  
 /* ---------- Responsive ---------- */
