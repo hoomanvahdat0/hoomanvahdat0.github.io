@@ -1,0 +1,11 @@
+title: Hooman's Blog
+description: Notes on technology, current events, and what I'm building
+theme: minima
+
+# Heading shown above the post list on the home page
+minima:
+  list_title: Posts
+
+# Show an About link in the header (needs an about.md page, optional)
+# header_pages:
+#   - about.md
