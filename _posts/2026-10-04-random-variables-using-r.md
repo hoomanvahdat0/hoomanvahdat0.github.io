@@ -1,4 +1,3 @@
-# Random Variables Using R
 
 ## Scenario
 
