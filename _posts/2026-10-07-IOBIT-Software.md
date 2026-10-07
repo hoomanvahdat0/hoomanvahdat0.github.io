@@ -19,4 +19,4 @@ Together, these utilities cover several common areas of computer maintenance—f
 
 For users who prefer having several maintenance functions available through one software ecosystem, IObit’s collection provides a convenient set of tools for keeping a Windows PC maintained and organized.
 
-Learn more about IObit: [Visit IObit](https://google.com)
+Learn more about IObit: [Visit IObit](https://IOBIT.com)
