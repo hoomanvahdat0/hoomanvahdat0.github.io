@@ -1,3 +1,8 @@
+---
+layout: post
+title: "IOBIT Software"
+date: 2026-10-07
+---
 ## Peace of Mind with IObit Software
 
 Keeping a computer running smoothly requires more than just installing an operating system and leaving it alone. Over time, unnecessary files accumulate, drivers become outdated, software needs updates, and unwanted programs can take up valuable space. This is where IObit offers a collection of tools designed to help with system maintenance, optimization, and security.
