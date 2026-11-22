@@ -29,7 +29,7 @@ I tried IObit's maintenance tools to see how much of that they could handle in o
 
 Advanced SystemCare is the all-rounder. It cleans unnecessary files, tweaks system settings, and runs security-related scans to help spot potential threats.
 
-**My experience:** [e.g., "My first scan found X GB of junk files and took about X minutes."]
+
 
 ![Advanced SystemCare scan results summary](/assets/images/iobit/advanced-systemcare.png)
 
@@ -49,7 +49,7 @@ Instead of hunting down updates for each hardware component by hand, Driver Boos
 
 Software Updater checks your installed applications for new versions and makes updating easier. Updates matter for new features, but also for security and compatibility.
 
-**My experience:** [e.g., "It found X apps that needed updates, including ___."]
+
 
 ![Software Updater list of apps with available updates](/assets/images/iobit/software-updater.png)
 
@@ -58,7 +58,7 @@ Software Updater checks your installed applications for new versions and makes u
 
 The standard Windows uninstall often leaves files and other remnants behind. IObit Uninstaller goes further by helping remove those leftovers along with the program itself.
 
-**My experience:** [e.g., "After removing ___, it found X MB of leftover files."]
+
 
 ![IObit Uninstaller prompt showing leftover files](/assets/images/iobit/uninstaller.png)
 
