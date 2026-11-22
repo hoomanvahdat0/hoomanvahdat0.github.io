@@ -3,6 +3,7 @@ layout: post
 title: "6 IObit Tools That Keep My Windows PC Running Smoothly"
 description: "A hands-on look at IObit's maintenance tools: cleanup, drivers, updates, uninstalling, malware protection, and disk optimization."
 image: /assets/images/iobit/hero.png
+date: 2026-10-07
 ---
 
 ![IObit Advanced SystemCare dashboard after a scan](/assets/images/iobit/hero.png)
