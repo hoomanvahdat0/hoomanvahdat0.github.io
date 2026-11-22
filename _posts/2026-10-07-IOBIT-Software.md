@@ -12,7 +12,7 @@ A computer needs more than an operating system and a "set it and forget it" atti
 
 I tried IObit's maintenance tools to see how much of that they could handle in one place. Here's what each one does, what it looked like on my PC, and who it's best for.
 
-*Disclosure: [Add one line here if you used affiliate links or received anything from IObit. Otherwise, say these are your own impressions.]*
+
 
 ## Quick Overview
 
@@ -32,7 +32,7 @@ Advanced SystemCare is the all-rounder. It cleans unnecessary files, tweaks syst
 **My experience:** [e.g., "My first scan found X GB of junk files and took about X minutes."]
 
 ![Advanced SystemCare scan results summary](/assets/images/iobit/advanced-systemcare.png)
-*Advanced SystemCare's results summary after a full scan.*
+
 
 ## Driver Booster
 
@@ -41,7 +41,7 @@ Instead of hunting down updates for each hardware component by hand, Driver Boos
 **My experience:** [e.g., "It flagged X outdated drivers, including audio and graphics."]
 
 ![Driver Booster list of outdated drivers](/assets/images/iobit/driver-booster.png)
-*Driver Booster flagging outdated drivers after a scan.*
+
 
 > **Tip:** Create a Windows restore point before installing driver updates, just in case something doesn't play nicely.
 
@@ -52,7 +52,7 @@ Software Updater checks your installed applications for new versions and makes u
 **My experience:** [e.g., "It found X apps that needed updates, including ___."]
 
 ![Software Updater list of apps with available updates](/assets/images/iobit/software-updater.png)
-*Software Updater listing apps with updates available.*
+
 
 ## IObit Uninstaller
 
@@ -61,7 +61,7 @@ The standard Windows uninstall often leaves files and other remnants behind. IOb
 **My experience:** [e.g., "After removing ___, it found X MB of leftover files."]
 
 ![IObit Uninstaller prompt showing leftover files](/assets/images/iobit/uninstaller.png)
-*The leftover-files prompt after uninstalling a program.*
+
 
 ## IObit Malware Fighter
 
@@ -70,7 +70,7 @@ Malware Fighter is built to detect and remove viruses, spyware, and other harmfu
 **My experience:** [e.g., "A full scan took about X minutes and found ___."]
 
 ![IObit Malware Fighter protection status](/assets/images/iobit/malware-fighter.png)
-*Malware Fighter's protection status screen.*
+
 
 ## Smart Defrag
 
@@ -79,7 +79,7 @@ Smart Defrag optimizes disk performance through defragmentation. On a traditiona
 > **Important:** SSDs use different optimization methods and should not be treated like HDDs. If your PC has an SSD, you generally don't need to defragment it.
 
 ![Smart Defrag disk analysis view](/assets/images/iobit/smart-defrag.png)
-*Smart Defrag's disk analysis view.*
+
 
 ## What I Liked and What to Watch For
 
@@ -87,14 +87,14 @@ Smart Defrag optimizes disk performance through defragmentation. On a traditiona
 
 - Everything lives in one ecosystem, so there's less app-hopping
 - Scans are quick and easy to understand
-- [Add your own]
+  
 
 **What to watch for**
 
 - Some features require a paid upgrade
 - Review what's selected before applying any cleanup
 - Make a restore point before updating drivers
-- [Add your own]
+
 
 ## Which Tools Do You Need?
 
