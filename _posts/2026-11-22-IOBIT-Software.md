@@ -38,7 +38,7 @@ Advanced SystemCare is the all-rounder. It cleans unnecessary files, tweaks syst
 
 Instead of hunting down updates for each hardware component by hand, Driver Booster scans your PC for outdated drivers and helps you update them. Current drivers support better hardware compatibility and system stability.
 
-**My experience:** [e.g., "It flagged X outdated drivers, including audio and graphics."]
+
 
 ![Driver Booster list of outdated drivers](/assets/images/iobit/driver-booster.png)
 
@@ -67,7 +67,7 @@ The standard Windows uninstall often leaves files and other remnants behind. IOb
 
 Malware Fighter is built to detect and remove viruses, spyware, and other harmful software. It also uses the Bitdefender engine for additional threat detection.
 
-**My experience:** [e.g., "A full scan took about X minutes and found ___."]
+
 
 ![IObit Malware Fighter protection status](/assets/images/iobit/malware-fighter.png)
 
